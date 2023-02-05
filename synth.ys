@@ -18,5 +18,5 @@ clean
 show
 
 # write synthesized design
-write_verilog synth_netlist.v
+write_verilog ./netlist/synth_netlist.v
 

@@ -8,4 +8,4 @@ build:
 	$(IV) $(find . -name *.v)
 
 synth:
-	$(YY) synth.ys
+	$(YY) synth.ys | tee ./log/synth.log
