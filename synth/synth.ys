@@ -1,0 +1,22 @@
+# a barebones example synth script, taken from https://stackoverflow.com/questions/31434380/what-is-a-good-template-yosys-synthesis-script
+
+# TODO: replace the top module name and library name with variables, makes it more generic when copying to different projects
+
+# read design 
+read_verilog ./rtl/Example.v 
+#hierarchy -top Example -libdir ./libs
+
+# generic synthesis
+synth -top Example
+
+# mapping to cmos_cells.lib, just as an example lib
+dfflibmap -liberty ./libs/cmos_cells.lib
+abc -liberty ./libs/cmos_cells.lib
+clean
+
+# show the design schematic, because why not
+show
+
+# write synthesized design
+write_verilog synth_netlist.v
+
