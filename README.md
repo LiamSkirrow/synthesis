@@ -1,5 +1,5 @@
 # Yosys Project Template
-A template structure for synthesising a generic RTL project
+A template structure for synthesising a generic RTL project using Yosys. The main branch is as generic as possible, and the branches contain modified synthesis flows for specific projects.
 
 ## The plan for this repo
 The intention is for this repo to serve as a generic synthesis flow for future RTL projects. It should include functionality for Icarus Verilog (to compile the RTL and check for syntax errors), as well as to run a simple synthesis flow using Yosys as the synthesis engine. 
